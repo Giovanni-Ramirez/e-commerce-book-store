@@ -211,6 +211,7 @@ button {
 .header__img--wrapper {
     padding: 20px;
     height: 100%;
+    z-index: 50;
     max-height: 50vh;
 }
 
@@ -240,7 +241,7 @@ button {
     content: '';
     position: absolute;
     width: 101vw;
-    height: 12vh;
+    height: 12vw;
     left: 0;
     z-index: 1;
     background-size: cover;
@@ -264,7 +265,6 @@ button {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 .highlight__img {
@@ -291,6 +291,7 @@ button {
 .highlight__subtitle {
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /* FEATURES BOOKS */
@@ -392,6 +393,33 @@ footer {
     padding: 0 8px;
 }
 
+
+/* SMALL PHONE, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 786px){
+    .header__description {
+        padding: 0 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .book {
+        width: 50%;
+    }
+}
+
+
+/* SMALL PHONES, LARGE SMARTPHONES */
+
 @media (max-width: 550px) {
     .nav__links {
         display: none;
@@ -400,4 +428,17 @@ footer {
     .btn__menu {
         display: block;
     }
+
+    .highlight__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .highlight {
+        width: 100%;
+    }
+
+    .highlight:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
 }
